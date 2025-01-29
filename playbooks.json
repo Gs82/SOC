@@ -1,0 +1,159 @@
+{
+    "malware_detection": {
+        "steps": [
+            "Isolate the affected system from the network to contain the infection.",
+            "Collect and analyze malware samples (using static and dynamic analysis).",
+            "Identify the initial infection vector (e.g., email attachment, malicious URL, USB).",
+            "Quarantine or remove the malware using antivirus or EDR solutions.",
+            "Perform a full system scan to ensure no remaining malicious artifacts.",
+            "Update all security tools and apply patches to prevent re-infection.",
+            "Document the incident, root cause, and lessons learned."
+        ]
+    },
+    "phishing_response": {
+        "steps": [
+            "Analyze email headers and metadata to verify the sender’s authenticity.",
+            "Check any attachments or URLs in a sandbox environment for malicious activity.",
+            "Block the sender’s address or domain if confirmed malicious.",
+            "Search email logs and environment for similar phishing messages or campaigns.",
+            "Educate affected users on phishing awareness and indicators.",
+            "Update email filters and security rules to block future similar attacks."
+        ]
+    },
+    "ransomware_incident": {
+        "steps": [
+            "Disconnect affected devices from the network to prevent further spread.",
+            "Engage incident response and legal/compliance teams immediately.",
+            "Identify the ransomware strain by analyzing ransom notes or binary.",
+            "Assess the extent of data encryption and identify potentially recoverable backups.",
+            "Coordinate with IT to restore data from clean backups (never pay ransom unless legally instructed).",
+            "Investigate initial attack vector (e.g., phishing, RDP compromise) and remediate.",
+            "Apply security patches, update AV/EDR, and strengthen access controls.",
+            "Conduct a post-incident review and refine incident response procedures."
+        ]
+    },
+    "data_breach": {
+        "steps": [
+            "Confirm and validate the breach by collecting relevant logs and indicators.",
+            "Notify the incident response team and legal/compliance for required disclosures.",
+            "Identify the scope of compromised data (personal, financial, intellectual property).",
+            "Contain the breach by isolating or disabling compromised accounts/systems.",
+            "Preserve and collect forensic evidence for internal and/or law enforcement use.",
+            "Remediate vulnerabilities (patch, reconfigure security controls, reset credentials).",
+            "Notify affected parties if required by law or policy.",
+            "Perform a root cause analysis and document lessons learned."
+        ]
+    },
+    "ddos_attack": {
+        "steps": [
+            "Identify the targeted services and the nature of the DDoS (volumetric, protocol, application-layer).",
+            "Engage your ISP or DDoS mitigation service to filter or reroute malicious traffic.",
+            "Implement rate limiting and traffic filtering on firewalls and load balancers.",
+            "Monitor network performance and server logs for abnormal spikes or patterns.",
+            "Communicate with key stakeholders about service impacts and timelines.",
+            "Review and update network and application configurations to prevent future DDoS.",
+            "Document the attack details and refine mitigation strategies."
+        ]
+    },
+    "brute_force_attack": {
+        "steps": [
+            "Detect brute force attempts via failed login attempts and lockout policies.",
+            "Block offending IP addresses or ranges at firewall or IPS level.",
+            "Enforce strong password policies and enable multi-factor authentication (MFA).",
+            "Review affected account activity for potential unauthorized access.",
+            "Reset compromised or potentially compromised credentials.",
+            "Implement account lockout after a threshold of failed logins and monitor suspicious activity.",
+            "Review logs for patterns to strengthen future detection rules."
+        ]
+    },
+    "sql_injection": {
+        "steps": [
+            "Identify the affected database or web application component.",
+            "Block malicious traffic via WAF (Web Application Firewall) or IPS if available.",
+            "Analyze web server and database logs to pinpoint injection entry points.",
+            "Immediately sanitize user inputs and parameterize queries.",
+            "Scan application code for insecure coding practices and fix them.",
+            "Perform a database integrity check to see if data was altered or exfiltrated.",
+            "Update security patches for web platforms and DB servers.",
+            "Document findings and implement secure coding best practices."
+        ]
+    },
+    "privilege_escalation": {
+        "steps": [
+            "Identify the compromised account(s) and the method used for escalation.",
+            "Immediately revoke or change elevated privileges for suspected compromised accounts.",
+            "Check security logs for lateral movement and additional compromised systems.",
+            "Apply necessary patches and fix misconfigurations (e.g., overly permissive file shares).",
+            "Implement least privilege policies and granular access controls.",
+            "Review group policy objects (GPOs) or system configurations for potential vulnerabilities.",
+            "Document incident details for compliance and future prevention measures."
+        ]
+    },
+    "insider_threat": {
+        "steps": [
+            "Identify abnormal behavior, access patterns, or data transfers (UEBA solutions can assist).",
+            "Isolate potentially malicious insider accounts and devices for forensic analysis.",
+            "Engage HR, legal, and management teams if user actions violate policies or laws.",
+            "Preserve all relevant logs, emails, and communications for investigation.",
+            "Assess data exfiltration or sabotage impact and remediate vulnerabilities.",
+            "Reinforce need-to-know access controls and monitor privileged users.",
+            "Conduct exit interviews or policy reviews if user is terminated or leaves the organization."
+        ]
+    },
+    "zero_day_exploit": {
+        "steps": [
+            "Identify indicators of compromise related to unpatched vulnerabilities (IoCs).",
+            "Isolate affected systems to prevent further exploitation.",
+            "Apply temporary workarounds or vendor-recommended mitigations if patches are unavailable.",
+            "Monitor threat intelligence feeds and vendor advisories for updates.",
+            "Implement network segmentation, strict firewall rules, and WAF protections.",
+            "Notify impacted stakeholders about potential risks and required actions.",
+            "Apply the official patch or fix as soon as it’s available and validated.",
+            "Document the incident timeline and update response procedures."
+        ]
+    },
+    "unauthorized_access": {
+        "steps": [
+            "Identify compromised accounts or access points and immediately revoke unauthorized credentials.",
+            "Run a full scan for malware or backdoors on affected systems.",
+            "Review logs to trace how unauthorized access was obtained.",
+            "Reset passwords and enforce MFA for all critical accounts.",
+            "Notify the security team and management; evaluate potential data loss.",
+            "Conduct a lessons-learned session to strengthen security controls.",
+            "Document the incident details for compliance and auditing."
+        ]
+    },
+    "vulnerability_management": {
+        "steps": [
+            "Regularly scan networks and systems for known vulnerabilities.",
+            "Prioritize vulnerabilities based on severity, exploit availability, and asset criticality.",
+            "Develop a patching schedule or remediation plan for high/critical findings.",
+            "Test patches in a staging environment before production deployment.",
+            "Monitor systems post-patch for performance or compatibility issues.",
+            "Maintain an updated asset inventory and ensure all endpoints are scanned.",
+            "Produce monthly or quarterly vulnerability reports for management review."
+        ]
+    },
+    "lost_or_stolen_device": {
+        "steps": [
+            "Notify the security team and management immediately upon device loss/theft.",
+            "Remote lock or wipe the device if the feature is available.",
+            "Change passwords for all accounts accessible from the device.",
+            "Investigate any potential data exposure or unauthorized access.",
+            "Review MDM (mobile device management) logs or endpoint logs.",
+            "File a police report if necessary and provide incident details.",
+            "Document the event and adjust mobile/endpoint security policies as needed."
+        ]
+    },
+    "unusual_network_traffic": {
+        "steps": [
+            "Identify baseline network behavior to determine what is considered unusual.",
+            "Use IDS/IPS and SIEM alerts to pinpoint suspicious connections or data transfers.",
+            "Isolate any systems involved in suspicious activity for further investigation.",
+            "Examine logs, processes, and running services on affected hosts.",
+            "Block malicious IPs or domains if identified.",
+            "Review firewall configurations and segmentation policies.",
+            "Document the findings and refine network monitoring rules."
+        ]
+    }
+}
